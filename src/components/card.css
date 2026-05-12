@@ -1,0 +1,21 @@
+.card {
+  background-color: crimson;
+  justify-content: center;
+  color: white;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+
+/* .stats {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+} */
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+}
