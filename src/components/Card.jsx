@@ -7,8 +7,15 @@ export default function Card() {
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/")
       .then((response) => response.json())
-      .then((data) => {
-        setPokemon(data.results);
+      .then((data) =>
+        Promise.all(
+          data.results.map((poke) =>
+            fetch(poke.url).then((response) => response.json()),
+          ),
+        ),
+      )
+      .then((details) => {
+        setPokemon(details);
         setLoading(false);
       })
       .catch((error) => {
@@ -24,10 +31,12 @@ export default function Card() {
   return (
     <div>
       <h1> Pokemon </h1>
-
       {pokemon.map((poke) => (
         <div key={poke.name}>
           <h2>{poke.name}</h2>
+          <img src={poke.sprites.front_default} alt={poke.name} />
+          <h4>{poke.height}</h4>
+          <div></div>
         </div>
       ))}
     </div>
