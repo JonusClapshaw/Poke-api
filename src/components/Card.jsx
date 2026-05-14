@@ -69,27 +69,28 @@ export default function Card() {
 
       {pokemon && !loading && (
         <div className="card">
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-          <h2>{pokemon.name}</h2>
-          <div className="stats">
-            <div className="stat">
-              <h4>Height: </h4>
-              <h4>{pokemon.height / 10}m</h4>
-            </div>
-
-            <div className="stat">
-              <h4 className="stat">HP: </h4>{" "}
-              <h4>{getStatValue(pokemon.stats, "hp")}</h4>
-            </div>
-
-            <div className="stat">
-              <h4 className="stat">Attack: </h4>{" "}
-              <h4>{getStatValue(pokemon.stats, "attack")}</h4>
-            </div>
-
-            <div className="stat">
-              <h4 className="stat">Defense: </h4>{" "}
-              <h4>{getStatValue(pokemon.stats, "defense")}</h4>
+          <div className="card-image-area">
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+          </div>
+          <div className="card-body">
+            <h2>{pokemon.name}</h2>
+            <div className="stats">
+              <div className="stat">
+                <span className="stat-label">Height</span>
+                <span className="stat-value">{pokemon.height / 10} m</span>
+              </div>
+              <div className="stat">
+                <span className="stat-label">HP</span>
+                <span className="stat-value">{getStatValue(pokemon.stats, "hp")}</span>
+              </div>
+              <div className="stat">
+                <span className="stat-label">Attack</span>
+                <span className="stat-value">{getStatValue(pokemon.stats, "attack")}</span>
+              </div>
+              <div className="stat">
+                <span className="stat-label">Defense</span>
+                <span className="stat-value">{getStatValue(pokemon.stats, "defense")}</span>
+              </div>
             </div>
           </div>
         </div>

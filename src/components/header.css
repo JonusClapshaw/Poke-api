@@ -1,0 +1,15 @@
+.site-header {
+  width: 100%;
+  background: linear-gradient(160deg, #f7dc6f 0%, #f0b429 100%);
+  color: #1a1a2e;
+  text-align: center;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}

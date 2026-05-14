@@ -1,5 +1,11 @@
 footer {
-  background-color: grey;
-  color: white;
+  width: 100%;
+  background: linear-gradient(160deg, #f7dc6f 0%, #f0b429 100%);
+  color: #1a1a2e;
   text-align: center;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
 }

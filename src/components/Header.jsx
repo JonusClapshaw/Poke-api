@@ -1,5 +1,9 @@
+import "./header.css";
+
 export default function Header() {
     return (
-        <h1> head </h1>
+        <header className="site-header">
+            <h1>PokéSearch</h1>
+        </header>
     )
 }
